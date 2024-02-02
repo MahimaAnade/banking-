@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class UserRegistration {
+    private static int accountNumberGenerator = 1001;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Banking System");
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your address: ");
+        String address = scanner.nextLine();
+
+        System.out.print("Enter your contact information: ");
+        String contactInfo = scanner.nextLine();
+
+        System.out.print("Enter initial deposit amount: ");
+        double initialDeposit = scanner.nextDouble();
+
+        // Generate a unique account number
+        int accountNumber = accountNumberGenerator++;
+
+        // Store user details in memory (You would use a database in a real application)
+        // For simplicity, we are just printing the details
+        System.out.println("\nRegistration Successful!");
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Name: " + name);
+        System.out.println("Address: " + address);
+        System.out.println("Contact Information: " + contactInfo);
+        System.out.println("Initial Deposit: $" + initialDeposit);
+
+        // Close scanner
+        scanner.close();
+    }
+}
